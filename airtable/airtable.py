@@ -14,7 +14,7 @@
 #                     (Airtable API call, like RESTful style)
 #
 # Input Format:
-#	there is no limited input format, just follow utility function paramaters type.
+#	There is no restriction on the input format, just follow the utility function parameter type.
 #
 # Requirements:
 # 	API_key: function call must have Airtable.com API_key, the API_key need regrist 
