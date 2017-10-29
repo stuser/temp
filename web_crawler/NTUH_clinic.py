@@ -45,6 +45,7 @@
 import pandas as pd
 import requests
 import re
+import gc
 from bs4 import BeautifulSoup
 
 QueryURL = "https://reg.ntuh.gov.tw/WebAdministration/ClinicCurrentLightNoByDeptCode.aspx"
@@ -103,7 +104,6 @@ class BsObject(object):
         html=self.sess.post(self.url, data=body)
         return BeautifulSoup(html.content,'html.parser')
 
-
     def convertDataToDataFrame(self, soup):
         #clinic_no
         clinic_no = []
@@ -157,7 +157,12 @@ def main():
     bs = BsObject(QueryURL, Hosp, Dept, AMPM, QueryDate, sess)
     soup = bs.getQueryResult()
     df = bs.convertDataToDataFrame(soup)
+    sess.close()
     print(df)
+    del bs
+    del soup
+    del df
+    gc.collect()
 
 if __name__ =='__main__':
     main()
