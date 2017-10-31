@@ -150,30 +150,43 @@ class BsObject(object):
             })
         return query_table
 
-#export DataFrame to CSV file, format: NTUH_[hosp]_[dept]_[ampm]_[querydate]_[export_timestamp].csv
-def exportDataToCSVfile(df,directory,hosp,dept,ampm,querydate):
+def exportDataToCSVfile(df, classname, directory, hosp, dept, ampm, querydate):
+    #export DataFrame to CSV file, format: [classname]_[hosp]_[dept]_[ampm]_[querydate]_[export_timestamp].csv
     if not os.path.exists(directory):
         os.makedirs(directory)
-    df.to_csv('{}/NTUH_{}_{}_{}_{}_{}.csv'.format(directory, hosp, dept, ampm, querydate.replace("/",""), 
+    df.to_csv('{}/{}_{}_{}_{}_{}_{}.csv'.format(directory, classname, hosp, dept, ampm, querydate.replace("/",""), 
                                             dt.datetime.now().strftime('%Y%m%d%H%M%S')), index=False, encoding="utf-8")
 
+def loadParamaterFile(filename):
+    #load paramater file (BsObject request paramaters)
+    params = pd.read_csv('{}.csv'.format(filename), dtype=str)
+    params = params.dropna(subset = ['classname', 'directory', 'url', 'hosp', 'dept', 'ampm'])
+    return params
+
 def main():
+    params = loadParamaterFile("NTUH_params")
+    #print("Query paramaters:")
+    #print(params)
     #class test paramaters:
-    QueryURL = "https://reg.ntuh.gov.tw/WebAdministration/ClinicCurrentLightNoByDeptCode.aspx"
-    Hosp="T0"
-    Dept="MED"
-    AMPM="1"
+    ClassName = params.classname[0]
+    Directory = params.directory[0]
+    QueryURL = params.url[0]
+    Hosp= params.hosp[0]
+    Dept= params.dept[0]
+    AMPM= params.ampm[0]
     QueryDate= dt.datetime.now().strftime('%Y/%m/%d') #"2017/10/27"
     sess=requests.Session()
 
     #class test code:
+    #print("BsObject:",QueryURL, Hosp, Dept, AMPM, QueryDate)
     bs = BsObject(QueryURL, Hosp, Dept, AMPM, QueryDate, sess)
     soup = bs.getQueryResult()
     df = bs.convertDataToDataFrame(soup)
     sess.close()
-    print(df)
-    exportDataToCSVfile(df, "download", Hosp, Dept, AMPM, QueryDate)
+    #print(df)
+    exportDataToCSVfile(df, ClassName, Directory, Hosp, Dept, AMPM, QueryDate)
 
+    del params
     del bs
     del soup
     del df

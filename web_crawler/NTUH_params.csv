@@ -1,0 +1,5 @@
+classname,directory,url,hosp,dept,ampm,note
+NTUH,download,https://reg.ntuh.gov.tw/WebAdministration/ClinicCurrentLightNoByDeptCode.aspx,T0,MED,1,class test
+NTUH,download,https://reg.ntuh.gov.tw/WebAdministration/ClinicCurrentLightNoByDeptCode.aspx,T0,PED,1,class test
+NTUH,download,https://reg.ntuh.gov.tw/WebAdministration/ClinicCurrentLightNoByDeptCode.aspx,T0,DENT,1,class test
+,,,,,,
