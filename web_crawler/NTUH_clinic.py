@@ -45,15 +45,10 @@
 import pandas as pd
 import requests
 import re
+import os
 import gc
+import datetime as dt
 from bs4 import BeautifulSoup
-
-QueryURL = "https://reg.ntuh.gov.tw/WebAdministration/ClinicCurrentLightNoByDeptCode.aspx"
-Hosp="T0"
-Dept="MED"
-AMPM="2"
-QueryDate="2017/10/27"
-sess=requests.Session()
 
 class BsObject(object):
     def __init__(self, QueryURL, Hosp, Dept, AMPM, QueryDate, sess):
@@ -139,8 +134,10 @@ class BsObject(object):
                 light_no_time.append("--:--")
             else:
                 light_no_time.append(elm['title'])
+        #timestamp
+        timestamp = [dt.datetime.now()] * len(clinic_no)
 
-        #column_name = ["clinic_no","is_close","remark1","dr_name","clinic_name","light_no_show","light_no_time"]
+        #column_name = ["clinic_no","is_close","remark1","dr_name","clinic_name","light_no_show","light_no_time","timestamp"]
         query_table = pd.DataFrame(
             {'clinic_no': clinic_no,
             'is_close': is_close,
@@ -148,17 +145,35 @@ class BsObject(object):
             'dr_name': dr_name,
             'clinic_name': clinic_name,
             'light_no_show': light_no_show,
-            'light_no_time': light_no_time     
+            'light_no_time': light_no_time,
+            'timestamp': timestamp
             })
         return query_table
 
+#export DataFrame to CSV file, format: NTUH_[hosp]_[dept]_[ampm]_[querydate]_[export_timestamp].csv
+def exportDataToCSVfile(df,directory,hosp,dept,ampm,querydate):
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    df.to_csv('{}/NTUH_{}_{}_{}_{}_{}.csv'.format(directory, hosp, dept, ampm, querydate.replace("/",""), 
+                                            dt.datetime.now().strftime('%Y%m%d%H%M%S')), index=False, encoding="utf-8")
+
 def main():
+    #class test paramaters:
+    QueryURL = "https://reg.ntuh.gov.tw/WebAdministration/ClinicCurrentLightNoByDeptCode.aspx"
+    Hosp="T0"
+    Dept="MED"
+    AMPM="1"
+    QueryDate= dt.datetime.now().strftime('%Y/%m/%d') #"2017/10/27"
+    sess=requests.Session()
+
     #class test code:
     bs = BsObject(QueryURL, Hosp, Dept, AMPM, QueryDate, sess)
     soup = bs.getQueryResult()
     df = bs.convertDataToDataFrame(soup)
     sess.close()
     print(df)
+    exportDataToCSVfile(df, "download", Hosp, Dept, AMPM, QueryDate)
+
     del bs
     del soup
     del df
