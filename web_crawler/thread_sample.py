@@ -39,12 +39,14 @@ def demo():
         all_param_set = nc.loadParamaterFile(ParamaterFileName)
         #依門診時段取出該時段的查詢條件
         param_set = all_param_set[ all_param_set['ampm'] == str(AmPmFlag) ]
+        param_set = param_set.reset_index() #*the index using in for-loop, subset need reset index.
         query_set_nums = len(param_set)
     else:
         query_set_nums = 0 #非門診時段,設查詢條件筆數為0,即不執行查詢動作
 
     for num in range(query_set_nums):
         sess = requests.Session()
+        #print("param_set",param_set)
         t = threading.Thread(target = query, 
                             args = [sess,
                                     param_set.classname[num],
@@ -59,5 +61,5 @@ def demo():
 interval = 300 #sec
 
 while True:
-    time.sleep(interval)
     threading.Thread(target=demo).start()
+    time.sleep(interval)

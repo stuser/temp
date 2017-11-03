@@ -1,0 +1,470 @@
+PS D:\GitHub\temp\web_crawler> python thread_sample.py
+Exception in thread Thread-241:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-242:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-243:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-244:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-245:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-246:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-247:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-248:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-249:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-250:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-251:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-252:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-253:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-254:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-255:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-256:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-257:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+Exception in thread Thread-258:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 50, in demo
+    param_set.classname[num],
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\series.py", line 623, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\pandas\core\indexes\base.py", line 2557, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 83, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 91, in pandas._libs.index.IndexEngine.get_value
+  File "pandas\_libs\index.pyx", line 139, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 811, in pandas._libs.hashtable.Int64HashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 817, in pandas._libs.hashtable.Int64HashTable.get_item
+KeyError: 0
+
+------------------------------------------------------------------------------------------------------------------------
+
+PS D:\GitHub\temp\web_crawler> python thread_sample.py
+Exception in thread Thread-188:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connection.py", line 326, in connect
+    ssl_context=context)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\util\ssl_.py", line 329, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 407, in wrap_socket
+    _context=self, _session=session)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 814, in __init__
+    self.do_handshake()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 1068, in do_handshake
+    self._sslobj.do_handshake()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\ssl.py", line 689, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:777)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='reg.ntuh.gov.tw', port=443): Max retries exceeded with url: /WebAdministration/ClinicCurrentLightNoByDeptCode.aspx (Caused by SSLError(SSL
+EOFError(8, 'EOF occurred in violation of protocol (_ssl.c:777)'),))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 11, in query
+    soup = bs.getQueryResult()
+  File "D:\GitHub\temp\web_crawler\NTUH_clinic.py", line 63, in getQueryResult
+    res=self.sess.get(self.url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 521, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 506, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='reg.ntuh.gov.tw', port=443): Max retries exceeded with url: /WebAdministration/ClinicCurrentLightNoByDeptCode.aspx (Caused by SSLError(SSLEOFE
+rror(8, 'EOF occurred in violation of protocol (_ssl.c:777)'),))
+
+Exception in thread Thread-189:
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\util\connection.py", line 83, in create_connection
+    raise err
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [WinError 10060] 連線嘗試失敗，因為連線對象有一段時間並未正確回應，或是連線建立失敗，因為連線的主機無法回應。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connectionpool.py", line 346, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connectionpool.py", line 850, in _validate_conn
+    conn.connect()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.VerifiedHTTPSConnection object at 0x04435DB0>: Failed to establish a new connection: [WinError 10060] 連線嘗試失敗，因為連線對象有一段時間
+並未正確回應，或是連線建立失敗，因為連線的主機無法回應。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\urllib3\util\retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='reg.ntuh.gov.tw', port=443): Max retries exceeded with url: /WebAdministration/ClinicCurrentLightNoByDeptCode.aspx (Caused by NewConnectio
+nError('<urllib3.connection.VerifiedHTTPSConnection object at 0x04435DB0>: Failed to establish a new connection: [WinError 10060] 連線嘗試失敗，因為連線對象有一段時間並未正確回應，或是連線建立失敗，
+因為連線的主機無法回應。',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "thread_sample.py", line 11, in query
+    soup = bs.getQueryResult()
+  File "D:\GitHub\temp\web_crawler\NTUH_clinic.py", line 63, in getQueryResult
+    res=self.sess.get(self.url)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 521, in get
+    return self.request('GET', url, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\admin\AppData\Local\Programs\Python\Python36-32\lib\site-packages\requests\adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='reg.ntuh.gov.tw', port=443): Max retries exceeded with url: /WebAdministration/ClinicCurrentLightNoByDeptCode.aspx (Caused by NewConnec
+tionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x04435DB0>: Failed to establish a new connection: [WinError 10060] 連線嘗試失敗，因為連線對象有一段時間並未正確回應，或是連線建立失
+敗，因為連線的主機無法回應。',))
+
+Traceback (most recent call last):
+  File "thread_sample.py", line 65, in <module>
+    time.sleep(interval)
+KeyboardInterrupt
+PS D:\GitHub\temp\web_crawler>
+
