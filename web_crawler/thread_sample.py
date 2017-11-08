@@ -6,6 +6,9 @@ import NTUH_clinic as nc
 #門診查詢參數檔案(.CSV file)
 ParamaterFileName = "NTUH_params"
 
+#查詢動作的時間間隔
+interval = 300 #sec
+
 def query(sess, classname, directory, url, hosp, dept, ampm, querydate):
     bs = nc.BsObject(url, hosp, dept, ampm, querydate, sess)
     soup = bs.getQueryResult()
@@ -39,7 +42,7 @@ def demo():
         all_param_set = nc.loadParamaterFile(ParamaterFileName)
         #依門診時段取出該時段的查詢條件
         param_set = all_param_set[ all_param_set['ampm'] == str(AmPmFlag) ]
-        param_set = param_set.reset_index() #*the index using in for-loop, subset need reset index.
+        param_set = param_set.reset_index() #*the index use in for-loop, subset need reset index.
         query_set_nums = len(param_set)
     else:
         query_set_nums = 0 #非門診時段,設查詢條件筆數為0,即不執行查詢動作
@@ -57,8 +60,6 @@ def demo():
                                     param_set.ampm[num],
                                     dt.datetime.now().strftime('%Y/%m/%d')])
         t.start()
-
-interval = 300 #sec
 
 while True:
     threading.Thread(target=demo).start()
