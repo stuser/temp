@@ -50,6 +50,10 @@ import gc
 import datetime as dt
 from bs4 import BeautifulSoup
 
+hosp_name = "NTUH" #台大醫院
+hosp_sub_map = {"T0":"總院區", "T2":"北護分院", "T3":"金山分院", "T4":"新竹分院", "T5":"竹東分院", "Y0":"雲林分院"}
+am_pm_map = {"1":"上午", "2":"下午", "3":"夜間"}
+
 class BsObject(object):
     def __init__(self, QueryURL, Hosp, Dept, AMPM, QueryDate, sess):
         self.url = QueryURL
@@ -100,26 +104,26 @@ class BsObject(object):
         return BeautifulSoup(html.content,'html.parser')
 
     def convertDataToDataFrame(self, soup):
-        #clinic_no
-        clinic_no = []
-        for elm in soup.find_all("span", id=re.compile("ClinicNo")):
-            clinic_no.append(elm.b.string)
-        #is_close
-        is_close = []
-        for elm in soup.find_all("span", id=re.compile("isClose")):
-            is_close.append(elm.b.string)
-        #remark1
-        remark1 = []
-        for elm in soup.find_all("span", id=re.compile("Remark1")):
-            remark1.append(elm.b.string)
-        #dr_name
-        dr_name = []
-        for elm in soup.find_all("a", id=re.compile("DRName")):
-            dr_name.append(elm.b.string)
+        #hospital_name
+        hospital_name = hosp_name
+        #hospital_subname
+        hospital_subname = hosp_sub_map[self.hosp]
         #clinic_name
         clinic_name = []
         for elm in soup.find_all("span", id=re.compile("ClinicName")):
             clinic_name.append(elm.b.string)
+        #clinic_no
+        clinic_no = []
+        for elm in soup.find_all("span", id=re.compile("ClinicNo")):
+            clinic_no.append(elm.b.string)            
+        #dr_name
+        dr_name = []
+        for elm in soup.find_all("a", id=re.compile("DRName")):
+            dr_name.append(elm.b.string)            
+        #is_close
+        is_close = []
+        for elm in soup.find_all("span", id=re.compile("isClose")):
+            is_close.append(elm.b.string)
         #light_no_show
         light_no_show = []
         for elm in soup.find_all("span", id=re.compile("LightNoShow")):
@@ -134,20 +138,38 @@ class BsObject(object):
                 light_no_time.append("--:--")
             else:
                 light_no_time.append(elm['title'])
+        #ampm
+        am_pm = am_pm_map[self.ampm]
         #timestamp
         timestamp = [dt.datetime.now()] * len(clinic_no)
+        #remark1
+        remark1 = []
+        for elm in soup.find_all("span", id=re.compile("Remark1")):
+            remark1.append(elm.b.string)
+        #remark2
+        remark2 = ""
+        #remark3
+        remark3 = ""
 
-        #column_name = ["clinic_no","is_close","remark1","dr_name","clinic_name","light_no_show","light_no_time","timestamp"]
+        #column_name = ["hospital_name","hospital_subname","clinic_name","clinic_no","dr_name","is_close","light_no_show",
+        #               "light_no_time","am_pm","timestamp","remark1","remark2","remark3"]
         query_table = pd.DataFrame(
-            {'clinic_no': clinic_no,
-            'is_close': is_close,
-            'remark1': remark1,
-            'dr_name': dr_name,
+            {'hospital_name': hospital_name,
+            'hospital_subname': hospital_subname,
             'clinic_name': clinic_name,
+            'clinic_no': clinic_no,
+            'dr_name': dr_name,
+            'is_close': is_close,
             'light_no_show': light_no_show,
             'light_no_time': light_no_time,
-            'timestamp': timestamp
+            'am_pm': am_pm,
+            'timestamp': timestamp,
+            'remark1': remark1,
+            'remark2': remark2,
+            'remark3': remark3
             })
+        query_table = query_table[["hospital_name","hospital_subname","clinic_name","clinic_no","dr_name","is_close","light_no_show",
+                                   "light_no_time","am_pm","timestamp","remark1","remark2","remark3"]]
         return query_table
 
 def exportDataToCSVfile(df, classname, directory, hosp, dept, ampm, querydate):
