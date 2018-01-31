@@ -52,6 +52,13 @@ import gc
 import datetime as dt
 from bs4 import BeautifulSoup
 
+<<<<<<< HEAD
+=======
+hosp_name = "NTUH"  # 台大醫院
+hosp_sub_map = {"T0": "總院區", "T2": "北護分院", "T3": "金山分院",
+                "T4": "新竹分院", "T5": "竹東分院", "Y0": "雲林分院"}
+am_pm_map = {"1": "上午", "2": "下午", "3": "夜間"}
+>>>>>>> 99277f8b94012424dc6c4874d6ebf9ee7b9ca5a4
 
 class BsObject(object):
     def __init__(self, QueryURL, Hosp, Dept, AMPM, QueryDate, sess):
@@ -102,15 +109,32 @@ class BsObject(object):
             "SelectHospDeptAndAMPM:QueryDateText": self.querydate,
             "SelectHospDeptAndAMPM:QueryButton": "查詢"
         }
+<<<<<<< HEAD
         html = self.sess.post(self.url, data=body)
 
         return BeautifulSoup(html.content, 'html.parser')
 
     def convertDataToDataFrame(self, soup):
+=======
+
+        html = self.sess.post(self.url, data=body)
+        return BeautifulSoup(html.content, 'html.parser')
+
+    def convertDataToDataFrame(self, soup):
+        # hospital_name
+        hospital_name = hosp_name
+        # hospital_subname
+        hospital_subname = hosp_sub_map[self.hosp]
+        # clinic_name
+        clinic_name = []
+        for elm in soup.find_all("span", id=re.compile("ClinicName")):
+            clinic_name.append(elm.b.string)
+>>>>>>> 99277f8b94012424dc6c4874d6ebf9ee7b9ca5a4
         # clinic_no
         clinic_no = []
         for elm in soup.find_all("span", id=re.compile("ClinicNo")):
             clinic_no.append(elm.b.string)
+<<<<<<< HEAD
         # is_close
         is_close = []
         for elm in soup.find_all("span", id=re.compile("isClose")):
@@ -119,14 +143,23 @@ class BsObject(object):
         remark1 = []
         for elm in soup.find_all("span", id=re.compile("Remark1")):
             remark1.append(elm.b.string)
+=======
+>>>>>>> 99277f8b94012424dc6c4874d6ebf9ee7b9ca5a4
         # dr_name
         dr_name = []
         for elm in soup.find_all("a", id=re.compile("DRName")):
             dr_name.append(elm.b.string)
+<<<<<<< HEAD
         # clinic_name
         clinic_name = []
         for elm in soup.find_all("span", id=re.compile("ClinicName")):
             clinic_name.append(elm.b.string)
+=======
+        # is_close
+        is_close = []
+        for elm in soup.find_all("span", id=re.compile("isClose")):
+            is_close.append(elm.b.string)
+>>>>>>> 99277f8b94012424dc6c4874d6ebf9ee7b9ca5a4
         # light_no_show
         light_no_show = []
         for elm in soup.find_all("span", id=re.compile("LightNoShow")):
@@ -141,11 +174,26 @@ class BsObject(object):
                 light_no_time.append("--:--")
             else:
                 light_no_time.append(elm['title'])
+<<<<<<< HEAD
+=======
+        # ampm
+        am_pm = am_pm_map[self.ampm]
+>>>>>>> 99277f8b94012424dc6c4874d6ebf9ee7b9ca5a4
         # timestamp
         timestamp = [dt.datetime.now()] * len(clinic_no)
+        # remark1
+        remark1 = []
+        for elm in soup.find_all("span", id=re.compile("Remark1")):
+            remark1.append(elm.b.string)
+        # remark2
+        remark2 = ""
+        # remark3
+        remark3 = ""
 
-        #column_name = ["clinic_no","is_close","remark1","dr_name","clinic_name","light_no_show","light_no_time","timestamp"]
+        column_name = ["hospital_name", "hospital_subname", "clinic_name", "clinic_no", "dr_name", "is_close", "light_no_show",
+                       "light_no_time", "am_pm", "timestamp", "remark1", "remark2", "remark3"]
         query_table = pd.DataFrame(
+<<<<<<< HEAD
             {'clinic_no': clinic_no,
                 'is_close': is_close,
                 'remark1': remark1,
@@ -155,6 +203,23 @@ class BsObject(object):
                 'light_no_time': light_no_time,
                 'timestamp': timestamp
                 })
+=======
+            {'hospital_name': hospital_name,
+             'hospital_subname': hospital_subname,
+             'clinic_name': clinic_name,
+             'clinic_no': clinic_no,
+             'dr_name': dr_name,
+             'is_close': is_close,
+             'light_no_show': light_no_show,
+             'light_no_time': light_no_time,
+             'am_pm': am_pm,
+             'timestamp': timestamp,
+             'remark1': remark1,
+             'remark2': remark2,
+             'remark3': remark3
+             })
+        query_table = query_table[column_name]  # set columns order
+>>>>>>> 99277f8b94012424dc6c4874d6ebf9ee7b9ca5a4
         return query_table
 
 
