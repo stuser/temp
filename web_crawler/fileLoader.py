@@ -12,7 +12,7 @@ for _root, _dirs, _files in os.walk(input_path):
 #read CSV file by date_flag
 import pandas as pd
 
-date_flag = "20171103"
+date_flag = "20180131"
 
 df = pd.DataFrame(columns=["clinic_name","clinic_no","dr_name","is_close","light_no_show","light_no_time","remark1","timestamp"])
 
