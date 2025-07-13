@@ -69,5 +69,5 @@
 兩者並非完全競爭關係，而是各自針對不同的開發需求與場景，甚至可結合成混合模式，以優化整體軟體開發流程。
 
 ### 參考文獻
-[1] Sapkota, R., Roumeliotis, K. I., & Karkee, M. (2025). Vibe coding vs. agentic coding: Fundamentals and practical implications of agentic ai. arXiv preprint arXiv:2505.19443.
-[2] Sarkar, A., & Drosos, I. (2025). Vibe coding: programming through conversation with artificial intelligence. arXiv preprint arXiv:2506.23253.
+- [1] Sapkota, R., Roumeliotis, K. I., & Karkee, M. (2025). Vibe coding vs. agentic coding: Fundamentals and practical implications of agentic ai. arXiv preprint arXiv:2505.19443.
+- [2] Sarkar, A., & Drosos, I. (2025). Vibe coding: programming through conversation with artificial intelligence. arXiv preprint arXiv:2506.23253.
